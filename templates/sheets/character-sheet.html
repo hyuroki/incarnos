@@ -1,0 +1,45 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th> {{localize "incarnos.abilities.str"}}</th>
+                <th> {{localize "incarnos.abilities.dex"}}</th>
+                <th> {{localize "incarnos.abilities.con"}}</th>
+                <th> {{localize "incarnos.abilities.int"}}</th>
+                <th> {{localize "incarnos.abilities.wis"}}</th>
+                <th> {{localize "incarnos.abilities.cha"}}</th>
+                <th> {{localize "incarnos.abilities.spd"}}</th>
+                <th> {{localize "incarnos.abilities.prc"}}</th>
+            </tr>
+            <div>
+                <table>
+                    <tr>
+                        <th> {{localize "incarnos.weapon.damage"}}</th>
+                        <th> {{localize "incarnos.weapon.hitbonus"}}</th>
+                        <th> {{localize "incarnos.weapon.melee"}}</th>
+                        <th> {{localize "incarnos.weapon.onehand"}}</th>
+                    </tr>
+                </table>
+            </div>
+            <tr> 
+                <td> 
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number"/>
+                </td>
+                <td> 
+                    <input name="data.hitbonus" type="text" value="{{data.hitbonus}}" data-dtype="Number"/>
+                </td>
+                <td> 
+                    <input name="data.melee" type="checkbox" {{checked data.melee}}/>
+                </td>
+                <td> 
+                    <input name="data.onehand" type="checkbox" {{checked data.onehand}}/>
+                </td>
+            </tr>
+        </table>
+        <textarea name="data.description">{{data.itemDescription}}</textarea>
+    </div>>
+</form>

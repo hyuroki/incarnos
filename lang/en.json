@@ -1,0 +1,30 @@
+{
+    "incarnos": {
+        "abilities" : {
+            "str":"Stength",
+            "dex":"Dexterity",
+            "con":"Constitution",
+            "int":"Intelligence",
+            "wis":"Wisdom",
+            "cha":"Charisma",
+            "spd":"Speed",
+            "prc":"Perception"
+        },
+        "abilitiyAbbr" : {
+            "str":"Str",
+            "dex":"Dex",
+            "con":"Con",
+            "int":"Int",
+            "wis":"Wis",
+            "cha":"Cha",
+            "spd":"Spd",
+            "prc":"Prc"
+        },
+        "weapon" : {
+            "damage":"Damage",
+            "hitbonus": "Hitbonus",
+            "melee": "Melee",
+            "onehand": "Onehanded"
+        }
+    }
+}

@@ -1,10 +1,50 @@
 {
-    "Actor": {},
+    "Actor": {
+        "types":[
+            "character", 
+            "npc"
+        ],
+        "templates": {
+            "common": {
+                "abilities": {
+                    "str": {
+                        "value": 5
+                    },
+                    "dex": {
+                        "value": 5
+                    },
+                    "con": {
+                        "value": 5
+                    },
+                    "int": {
+                        "value": 5
+                    },
+                    "wis": {
+                        "value": 5
+                    },
+                    "cha": {
+                        "value": 5
+                    },
+                    "prc": {
+                        "value": 5
+                    },
+                    "spd": {
+                        "value": 5
+                    }
+                }
+            }
+        }
+    },
     "Item": {
         "types":[
             "weapon",
             "armor"
         ],
+        "templates" : {
+            "itemDescription": {
+                "description": ""
+            }
+        },
         "weapon": {
             "templates": [
                 "itemDescription"
