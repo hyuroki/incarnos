@@ -1,0 +1,25 @@
+{
+    "Actor": {},
+    "Item": {
+        "types":[
+            "weapon",
+            "armor"
+        ],
+        "weapon": {
+            "templates": [
+                "itemDescription"
+            ],
+            "damage": 0,
+            "hitbonus": 0,
+            "melee": true,
+            "onehand": true
+        },
+        "armor": {
+            "templates": [
+                "itemDescription"
+            ],
+            "protection": 0,
+            "encumbrance": 0
+        }
+    }
+}
