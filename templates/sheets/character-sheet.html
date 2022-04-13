@@ -15,30 +15,6 @@
                 <th> {{localize "incarnos.abilities.spd"}}</th>
                 <th> {{localize "incarnos.abilities.prc"}}</th>
             </tr>
-            <div>
-                <table>
-                    <tr>
-                        <th> {{localize "incarnos.weapon.damage"}}</th>
-                        <th> {{localize "incarnos.weapon.hitbonus"}}</th>
-                        <th> {{localize "incarnos.weapon.melee"}}</th>
-                        <th> {{localize "incarnos.weapon.onehand"}}</th>
-                    </tr>
-                </table>
-            </div>
-            <tr> 
-                <td> 
-                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number"/>
-                </td>
-                <td> 
-                    <input name="data.hitbonus" type="text" value="{{data.hitbonus}}" data-dtype="Number"/>
-                </td>
-                <td> 
-                    <input name="data.melee" type="checkbox" {{checked data.melee}}/>
-                </td>
-                <td> 
-                    <input name="data.onehand" type="checkbox" {{checked data.onehand}}/>
-                </td>
-            </tr>
         </table>
         <textarea name="data.description">{{data.itemDescription}}</textarea>
     </div>>
