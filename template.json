@@ -6,32 +6,50 @@
         ],
         "templates": {
             "common": {
-                "abilities": {
-                    "str": {
-                        "value": 5
-                    },
-                    "dex": {
-                        "value": 5
-                    },
-                    "con": {
-                        "value": 5
-                    },
-                    "int": {
-                        "value": 5
-                    },
-                    "wis": {
-                        "value": 5
-                    },
-                    "cha": {
-                        "value": 5
-                    },
-                    "prc": {
-                        "value": 5
-                    },
-                    "spd": {
-                        "value": 5
-                    }
+                "concept": "",
+                "str": {
+                    "value": 5
+                },
+                "dex": {
+                    "value": 5
+                },
+                "con": {
+                    "value": 5
+                },
+                "int": {
+                    "value": 5
+                },
+                "wis": {
+                    "value": 5
+                },
+                "cha": {
+                    "value": 5
+                },
+                "prc": {
+                    "value": 5
+                },
+                "spd": {
+                    "value": 5
+                },
+                "hp": {
+                    "value": 10,
+                    "max": 10
+                },
+                "aura": {
+                    "value": 10,
+                    "max": 10
                 }
+            },
+            "character": {
+                "templates": [
+                    "common"
+                ],
+                "element": ""
+            },
+            "npc": {
+                "templates": [
+                    "common"
+                ]
             }
         }
     },

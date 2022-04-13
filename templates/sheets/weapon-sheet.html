@@ -3,7 +3,7 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
-    <div>
+    <div class="sheet-content">
         <table>
             <tr>
                 <th> {{localize "incarnos.weapon.damage"}}</th>
@@ -13,7 +13,7 @@
             </tr>
             <tr> 
                 <td> 
-                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number"/>
+                    <input name="data.damage" type="text" value="{{data.damage}}" />
                 </td>
                 <td> 
                     <input name="data.hitbonus" type="text" value="{{data.hitbonus}}" data-dtype="Number"/>
@@ -26,5 +26,6 @@
                 </td>
             </tr>
         </table>
+        <textarea name="data.description">{{data.description}}</textarea>
     </div>
 </form>

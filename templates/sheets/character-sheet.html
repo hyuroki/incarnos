@@ -1,7 +1,21 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="flexcol {{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{data.name}}" height="100" width="100" />
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
+            </h1>
+            <div class="resource">
+                <input type="number" name="data.hp.value" value="{{data.data.str}}"/>
+                <span> / </span>
+                <input type="number" name="data.hp.max" value="{{data.data.hp.max}}"/>
+            </div>
+            <div class="resource">
+                <input type="number" name="data.aura.value" value="{{data.aura.value}}"/>
+                <span> / </span>
+                <input type="number" name="data.aura.max" value="{{data.aura.max}}"/>
+            </div>
+        </div>
     </header>
     <div>
         <table>
@@ -16,6 +30,6 @@
                 <th> {{localize "incarnos.abilities.prc"}}</th>
             </tr>
         </table>
-        <textarea name="data.description">{{data.itemDescription}}</textarea>
-    </div>>
+        <textarea name="data.description">{{data.description}}</textarea>
+    </div>
 </form>
