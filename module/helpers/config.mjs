@@ -10,6 +10,8 @@ export const INCARNOS = {};
   "con": "INCARNOS.AbilityCon",
   "int": "INCARNOS.AbilityInt",
   "wis": "INCARNOS.AbilityWis",
+  "prc": "INCARNOS.AbilityPrc",
+  "spd": "INCARNOS.AbilitySpd",
   "cha": "INCARNOS.AbilityCha"
 };
 
@@ -19,5 +21,7 @@ INCARNOS.abilityAbbreviations = {
   "con": "INCARNOS.AbilityConAbbr",
   "int": "INCARNOS.AbilityIntAbbr",
   "wis": "INCARNOS.AbilityWisAbbr",
+  "prc": "INCARNOS.AbilityPrcAbbr",
+  "spd": "INCARNOS.AbilitySpdAbbr",
   "cha": "INCARNOS.AbilityChaAbbr"
 };

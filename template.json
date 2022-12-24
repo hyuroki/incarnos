@@ -34,6 +34,12 @@
           "wis": {
             "value": 10
           },
+          "prc": {
+            "value": 10
+          },
+          "spd": {
+            "value": 10
+          },
           "cha": {
             "value": 10
           }

@@ -4,6 +4,8 @@
   "INCARNOS.AbilityDex": "Dexterity",
   "INCARNOS.AbilityInt": "Intelligence",
   "INCARNOS.AbilityWis": "Wisdom",
+  "INCARNOS.AbilityPrc": "Perception",
+  "INCARNOS.AbilitySpd": "Speed",
   "INCARNOS.AbilityCha": "Charisma",
 
   "INCARNOS.AbilityStrAbbr": "str",
@@ -11,6 +13,8 @@
   "INCARNOS.AbilityDexAbbr": "dex",
   "INCARNOS.AbilityIntAbbr": "int",
   "INCARNOS.AbilityWisAbbr": "wis",
+  "INCARNOS.AbilityPrcAbbr": "prc",
+  "INCARNOS.AbilitySpdAbbr": "spd",
   "INCARNOS.AbilityChaAbbr": "cha",
 
   "INCARNOS.EffectCreate": "Create Effect",

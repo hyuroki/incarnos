@@ -68,6 +68,8 @@ export class IncarnosActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
+    console.log(context.system.abilities);
+
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.INCARNOS.abilities[k]) ?? k;
     }
