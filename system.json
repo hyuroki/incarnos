@@ -1,30 +1,34 @@
 {
-    "name": "incarnos",
-    "title": "Incarnos",
-    "description": "A Homebrew where elements reign",
-    "author": "hyuroki",
-    "version": 0.01,
-    "minimumCoreVersion": "0.6.4",
-    "compatibleCoreVersion": "0.9",
-    "esmodules": [
-        "incarnos.js"
-    ],
-    "styles":[
-        "incarnos.css"
-    ],
-    "packs": [
-
-    ],
-    "languages":[
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
-        }
-    ],
-    "gridDistance": 2,
-    "gridUnits": "m",
-    "primaryTokenAttribute": "hp",
-    "secondaryTokenAttribute": "aura",
-    "initiative": "1d20 + @spd + @prc"
+  "id": "boilerplate",
+  "title": "Boilerplate",
+  "description": "The Boilerplate system for FoundryVTT!",
+  "version": "1.2.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.287",
+    "maximum": 10
+  },
+  "authors": [{
+    "name": "Asacolips"
+  }],
+  "esmodules": ["module/boilerplate.mjs"],
+  "styles": ["css/boilerplate.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "changelog": "CHANGELOG.md"
 }
