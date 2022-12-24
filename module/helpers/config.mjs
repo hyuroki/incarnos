@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const INCARNOS = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- BOILERPLATE.abilities = {
-  "str": "BOILERPLATE.AbilityStr",
-  "dex": "BOILERPLATE.AbilityDex",
-  "con": "BOILERPLATE.AbilityCon",
-  "int": "BOILERPLATE.AbilityInt",
-  "wis": "BOILERPLATE.AbilityWis",
-  "cha": "BOILERPLATE.AbilityCha"
+ INCARNOS.abilities = {
+  "str": "INCARNOS.AbilityStr",
+  "dex": "INCARNOS.AbilityDex",
+  "con": "INCARNOS.AbilityCon",
+  "int": "INCARNOS.AbilityInt",
+  "wis": "INCARNOS.AbilityWis",
+  "cha": "INCARNOS.AbilityCha"
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  "str": "BOILERPLATE.AbilityStrAbbr",
-  "dex": "BOILERPLATE.AbilityDexAbbr",
-  "con": "BOILERPLATE.AbilityConAbbr",
-  "int": "BOILERPLATE.AbilityIntAbbr",
-  "wis": "BOILERPLATE.AbilityWisAbbr",
-  "cha": "BOILERPLATE.AbilityChaAbbr"
+INCARNOS.abilityAbbreviations = {
+  "str": "INCARNOS.AbilityStrAbbr",
+  "dex": "INCARNOS.AbilityDexAbbr",
+  "con": "INCARNOS.AbilityConAbbr",
+  "int": "INCARNOS.AbilityIntAbbr",
+  "wis": "INCARNOS.AbilityWisAbbr",
+  "cha": "INCARNOS.AbilityChaAbbr"
 };

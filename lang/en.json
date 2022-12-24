@@ -1,22 +1,22 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
+  "INCARNOS.AbilityStr": "Strength",
+  "INCARNOS.AbilityCon": "Constitution",
+  "INCARNOS.AbilityDex": "Dexterity",
+  "INCARNOS.AbilityInt": "Intelligence",
+  "INCARNOS.AbilityWis": "Wisdom",
+  "INCARNOS.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "INCARNOS.AbilityStrAbbr": "str",
+  "INCARNOS.AbilityConAbbr": "con",
+  "INCARNOS.AbilityDexAbbr": "dex",
+  "INCARNOS.AbilityIntAbbr": "int",
+  "INCARNOS.AbilityWisAbbr": "wis",
+  "INCARNOS.AbilityChaAbbr": "cha",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
+  "INCARNOS.EffectCreate": "Create Effect",
+  "INCARNOS.EffectToggle": "Toggle Effect",
+  "INCARNOS.EffectEdit": "Edit Effect",
+  "INCARNOS.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.Add": "Add"
+  "INCARNOS.Add": "Add"
 }
