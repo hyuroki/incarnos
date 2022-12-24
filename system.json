@@ -9,7 +9,7 @@
     "maximum": 10
   },
   "authors": [{
-    "name": "Asacolips"
+    "name": "hyuroki"
   }],
   "esmodules": ["module/incarnos.mjs"],
   "styles": ["css/incarnos.css"],
@@ -22,10 +22,10 @@
       "path": "lang/en.json"
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "gridDistance": 1.5,
+  "gridUnits": "m",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "secondaryTokenAttribute": "mana",
   "url": "",
   "manifest": "",
   "download": "",

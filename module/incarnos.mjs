@@ -1,9 +1,9 @@
 // Import document classes.
-import { BoilerplateActor } from "./documents/actor.mjs";
-import { BoilerplateItem } from "./documents/item.mjs";
+import { IncarnosActor } from "./documents/actor.mjs";
+import { IncarnosItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { BoilerplateActorSheet } from "./sheets/actor-sheet.mjs";
-import { BoilerplateItemSheet } from "./sheets/item-sheet.mjs";
+import { IncarnosActorSheet } from "./sheets/actor-sheet.mjs";
+import { IncarnosItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { INCARNOS } from "./helpers/config.mjs";
@@ -17,8 +17,8 @@ Hooks.once('init', async function() {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.incarnos = {
-    BoilerplateActor,
-    BoilerplateItem,
+    IncarnosActor,
+    IncarnosItem,
     rollItemMacro
   };
 
@@ -35,14 +35,14 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = BoilerplateActor;
-  CONFIG.Item.documentClass = BoilerplateItem;
+  CONFIG.Actor.documentClass = IncarnosActor;
+  CONFIG.Item.documentClass = IncarnosItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("incarnos", BoilerplateActorSheet, { makeDefault: true });
+  Actors.registerSheet("incarnos", IncarnosActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("incarnos", BoilerplateItemSheet, { makeDefault: true });
+  Items.registerSheet("incarnos", IncarnosItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
