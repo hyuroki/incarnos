@@ -1,30 +1,26 @@
 {
-    "incarnos": {
-        "abilities" : {
-            "str":"Stength",
-            "dex":"Dexterity",
-            "con":"Constitution",
-            "int":"Intelligence",
-            "wis":"Wisdom",
-            "cha":"Charisma",
-            "spd":"Speed",
-            "prc":"Perception"
-        },
-        "abilitiyAbbr" : {
-            "str":"Str",
-            "dex":"Dex",
-            "con":"Con",
-            "int":"Int",
-            "wis":"Wis",
-            "cha":"Cha",
-            "spd":"Spd",
-            "prc":"Prc"
-        },
-        "weapon" : {
-            "damage":"Damage",
-            "hitbonus": "Hitbonus",
-            "melee": "Melee",
-            "onehand": "Onehanded"
-        }
-    }
+  "INCARNOS.AbilityStr": "Strength",
+  "INCARNOS.AbilityCon": "Constitution",
+  "INCARNOS.AbilityDex": "Dexterity",
+  "INCARNOS.AbilityInt": "Intelligence",
+  "INCARNOS.AbilityWis": "Wisdom",
+  "INCARNOS.AbilityPrc": "Perception",
+  "INCARNOS.AbilitySpd": "Speed",
+  "INCARNOS.AbilityCha": "Charisma",
+
+  "INCARNOS.AbilityStrAbbr": "str",
+  "INCARNOS.AbilityConAbbr": "con",
+  "INCARNOS.AbilityDexAbbr": "dex",
+  "INCARNOS.AbilityIntAbbr": "int",
+  "INCARNOS.AbilityWisAbbr": "wis",
+  "INCARNOS.AbilityPrcAbbr": "prc",
+  "INCARNOS.AbilitySpdAbbr": "spd",
+  "INCARNOS.AbilityChaAbbr": "cha",
+
+  "INCARNOS.EffectCreate": "Create Effect",
+  "INCARNOS.EffectToggle": "Toggle Effect",
+  "INCARNOS.EffectEdit": "Edit Effect",
+  "INCARNOS.EffectDelete": "Delete Effect",
+
+  "INCARNOS.Add": "Add"
 }

@@ -1,83 +1,82 @@
 {
-    "Actor": {
-        "types":[
-            "character", 
-            "npc"
-        ],
-        "templates": {
-            "common": {
-                "concept": "",
-                "str": {
-                    "value": 5
-                },
-                "dex": {
-                    "value": 5
-                },
-                "con": {
-                    "value": 5
-                },
-                "int": {
-                    "value": 5
-                },
-                "wis": {
-                    "value": 5
-                },
-                "cha": {
-                    "value": 5
-                },
-                "prc": {
-                    "value": 5
-                },
-                "spd": {
-                    "value": 5
-                },
-                "hp": {
-                    "value": 10,
-                    "max": 10
-                },
-                "aura": {
-                    "value": 10,
-                    "max": 10
-                }
-            },
-            "character": {
-                "templates": [
-                    "common"
-                ],
-                "element": ""
-            },
-            "npc": {
-                "templates": [
-                    "common"
-                ]
-            }
-        }
+  "Actor": {
+    "types": ["character", "npc", "vehicle", "monster"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "mana": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "attributes": {
+          "xp": {
+            "value": 0
+          },
+          "level": {
+            "value": 1
+          }
+        },
+        "abilities": {
+          "str": {
+            "value": 5
+          },
+          "dex": {
+            "value": 5
+          },
+          "con": {
+            "value": 5
+          },
+          "int": {
+            "value": 5
+          },
+          "wis": {
+            "value": 5
+          },
+          "prc": {
+            "value": 5
+          },
+          "spd": {
+            "value": 5
+          },
+          "cha": {
+            "value": 5
+          }
+        },
+        "biography": ""
+      }
     },
-    "Item": {
-        "types":[
-            "weapon",
-            "armor"
-        ],
-        "templates" : {
-            "itemDescription": {
-                "description": ""
-            }
-        },
-        "weapon": {
-            "templates": [
-                "itemDescription"
-            ],
-            "damage": 0,
-            "hitbonus": 0,
-            "melee": true,
-            "onehand": true
-        },
-        "armor": {
-            "templates": [
-                "itemDescription"
-            ],
-            "protection": 0,
-            "encumbrance": 0
-        }
+    "character": {
+      "templates": ["base"]
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
     }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
 }
