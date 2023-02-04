@@ -47,12 +47,17 @@ export class IncarnosActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    const abilityScore = systemData.abilities;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
+    for (let [key, ability] of Object.entries(abilityScore)) {
+      // Calculate the saving throw value for its correspondant ability score.
+      ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
     }
+
+    // Calculate the parry value.
+    systemData.parry = (abilityScore.spd.value*2 + abilityScore.dex.value) / 3
+
   }
 
   /**

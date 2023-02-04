@@ -4,6 +4,7 @@ export const INCARNOS = {};
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
+
  INCARNOS.abilities = {
   "str": "INCARNOS.AbilityStr",
   "dex": "INCARNOS.AbilityDex",

@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "npc", "vehicle", "monster"],
     "templates": {
       "base": {
         "health": {
@@ -14,34 +14,37 @@
           "max": 5
         },
         "attributes": {
+          "xp": {
+            "value": 0
+          },
           "level": {
             "value": 1
           }
         },
         "abilities": {
           "str": {
-            "value": 10
+            "value": 5
           },
           "dex": {
-            "value": 10
+            "value": 5
           },
           "con": {
-            "value": 10
+            "value": 5
           },
           "int": {
-            "value": 10
+            "value": 5
           },
           "wis": {
-            "value": 10
+            "value": 5
           },
           "prc": {
-            "value": 10
+            "value": 5
           },
           "spd": {
-            "value": 10
+            "value": 5
           },
           "cha": {
-            "value": 10
+            "value": 5
           }
         },
         "biography": ""
