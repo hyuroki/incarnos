@@ -66,9 +66,19 @@ export class IncarnosActor extends Actor {
   _prepareNpcData(actorData) {
     if (actorData.type !== 'npc') return;
 
-    // Make modifications to data here. For example:
-    const systemData = actorData.system;
-    systemData.xp = (systemData.cr * systemData.cr) * 100;
+     // Make modifications to data here. For example:
+     const systemData = actorData.system;
+     const abilityScore = systemData.abilities;
+ 
+     // Loop through ability scores, and add their modifiers to our sheet output.
+     for (let [key, ability] of Object.entries(abilityScore)) {
+       // Calculate the saving throw value for its correspondant ability score.
+       ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
+     }
+ 
+     // Calculate the parry value.
+     systemData.parry = (abilityScore.spd.value*2 + abilityScore.dex.value) / 3
+ 
   }
 
   /**

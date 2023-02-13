@@ -45,6 +45,7 @@ export class IncarnosActorSheet extends ActorSheet {
     // Prepare NPC data and items.
     if (actorData.type == 'npc') {
       this._prepareItems(context);
+      this._prepareNpcData(context);
     }
 
     // Add roll data for TinyMCE editors.
@@ -64,6 +65,15 @@ export class IncarnosActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
+    // Handle ability scores.
+    console.log(context.system.abilities);
+
+    for (let [k, v] of Object.entries(context.system.abilities)) {
+      v.label = game.i18n.localize(CONFIG.INCARNOS.abilities[k]) ?? k;
+    }
+  }
+
+  _prepareNpcData(context) {
     // Handle ability scores.
     console.log(context.system.abilities);
 
