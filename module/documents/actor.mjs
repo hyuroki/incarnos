@@ -54,10 +54,6 @@ export class IncarnosActor extends Actor {
       // Calculate the saving throw value for its correspondant ability score.
       ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
     }
-
-    // Calculate the parry value.
-    systemData.parry = (abilityScore.spd.value*2 + abilityScore.dex.value) / 3
-
   }
 
   /**
@@ -75,10 +71,6 @@ export class IncarnosActor extends Actor {
        // Calculate the saving throw value for its correspondant ability score.
        ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
      }
- 
-     // Calculate the parry value.
-     systemData.parry = (abilityScore.spd.value*2 + abilityScore.dex.value) / 3
- 
   }
 
   /**

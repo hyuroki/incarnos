@@ -71,14 +71,36 @@
             "id": "6a95f043d5909460",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "docs/images/Pasted image 20230213033258.png"
+                "file": "docs/4. Beginning to understand.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c419255bdd160033",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.15"
+              }
+            }
+          },
+          {
+            "id": "c450348f49b7df00",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.16"
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -144,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/images/Pasted image 20230213033258.png",
+                "file": "docs/4. Beginning to understand.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/images/Pasted image 20230213033258.png",
+                "file": "docs/4. Beginning to understand.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/images/Pasted image 20230213033258.png"
+                "file": "docs/4. Beginning to understand.md"
               }
             }
           }
@@ -205,17 +227,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6a95f043d5909460",
+  "active": "c450348f49b7df00",
   "lastOpenFiles": [
-    "docs/4. Beginning to understand.md",
-    "docs/2. Goals.md",
-    "docs/1. Introduction.md",
     "docs/3. Humble Beginnings.md",
-    "docs/images/Pasted image 20230212000159.png",
-    "Pasted image 20230213022646.png.md",
-    "docs/images/Pasted image 20230213022646.png",
+    "docs/4. Beginning to understand.md",
+    "docs/images/Pasted image 20230211224751.png",
+    "docs/images/Pasted image 20230211224910.png",
+    "docs/images/Pasted image 20230211224925.png",
+    "docs/images/Pasted image 20230211225005.png",
     "docs/images/Pasted image 20230211225219.png",
-    "Untitled.md",
-    "Pasted.md"
+    "docs/images/Pasted image 20230212000159.png",
+    "docs/images/Pasted image 20230213025918.png",
+    "docs/images/Pasted image 20230213030922.png"
   ]
 }
