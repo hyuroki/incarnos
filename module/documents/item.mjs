@@ -37,7 +37,8 @@ export class IncarnosItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
+    const label = `<b>${item.name}</b>
+    <i>${item.system.description}</i>`;
 
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
@@ -52,7 +53,11 @@ export class IncarnosItem extends Item {
     else {
       // Retrieve roll data.
       const rollData = this.getRollData();
-
+      new Roll('1d20').toMessage({
+        speaker: speaker,
+        rollMode: rollMode,
+        flavor: label,
+      });
       // Invoke the roll and submit it to chat.
       const roll = new Roll(rollData.item.formula, rollData);
       // If you need to store the value first, uncomment the next line.
@@ -60,7 +65,7 @@ export class IncarnosItem extends Item {
       roll.toMessage({
         speaker: speaker,
         rollMode: rollMode,
-        flavor: label,
+        flavor: "Damage",
       });
       return roll;
     }

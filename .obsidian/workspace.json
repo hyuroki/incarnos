@@ -93,9 +93,11 @@
             "id": "c450348f49b7df00",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.1.16"
+                "file": "docs/3. Humble Beginnings.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -145,6 +147,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "ddec5639213c9f27",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -166,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4. Beginning to understand.md",
+                "file": "docs/3. Humble Beginnings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/4. Beginning to understand.md",
+                "file": "docs/3. Humble Beginnings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +216,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/4. Beginning to understand.md"
+                "file": "docs/3. Humble Beginnings.md"
               }
             }
           }
@@ -229,10 +239,12 @@
   },
   "active": "c450348f49b7df00",
   "lastOpenFiles": [
+    "docs/2. Goals.md",
+    "docs/1. Introduction.md",
+    "docs/images/Pasted image 20230211224910.png",
+    "docs/images/Pasted image 20230211224751.png",
     "docs/3. Humble Beginnings.md",
     "docs/4. Beginning to understand.md",
-    "docs/images/Pasted image 20230211224751.png",
-    "docs/images/Pasted image 20230211224910.png",
     "docs/images/Pasted image 20230211224925.png",
     "docs/images/Pasted image 20230211225005.png",
     "docs/images/Pasted image 20230211225219.png",

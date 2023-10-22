@@ -19,6 +19,9 @@
           },
           "level": {
             "value": 1
+          },        
+          "parry": {
+            "value": 5
           }
         },
         "abilities": {
@@ -50,12 +53,12 @@
         "biography": ""
       }
     },
-    "character": {
-      "templates": ["base"]
-    },
     "npc": {
       "templates": ["base"],
       "cr": 0
+    },
+    "character": {
+      "templates": ["base"]
     }
   },
   "Item": {

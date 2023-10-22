@@ -49,10 +49,17 @@ export class IncarnosActor extends Actor {
     const systemData = actorData.system;
     const abilityScore = systemData.abilities;
 
+    // Set Max HP and Mana 
+    systemData.health.max = 2*abilityScore.con.value + abilityScore.str.value
+    systemData.mana.max = 2*abilityScore.wis.value + abilityScore.int.value
+
+    // Set Parry
+    systemData.attributes.parry.value = Math.floor((2*abilityScore.spd.value + abilityScore.dex.value)/3)
+
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(abilityScore)) {
       // Calculate the saving throw value for its correspondant ability score.
-      ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
+      ability.save = Math.floor((ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4)
     }
   }
 
@@ -69,7 +76,7 @@ export class IncarnosActor extends Actor {
      // Loop through ability scores, and add their modifiers to our sheet output.
      for (let [key, ability] of Object.entries(abilityScore)) {
        // Calculate the saving throw value for its correspondant ability score.
-       ability.save = (ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4
+       ability.save = Math.floor((ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4)
      }
   }
 
