@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3. Humble Beginnings.md",
+                "file": "docs/4. Beginning to understand.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "docs/images/Pasted image 20230212000159.png"
+                "file": "docs/images/Pasted image 20230213033258.png"
               }
             }
           }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3. Humble Beginnings.md",
+                "file": "docs/images/Pasted image 20230213033258.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/3. Humble Beginnings.md",
+                "file": "docs/images/Pasted image 20230213033258.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/3. Humble Beginnings.md"
+                "file": "docs/images/Pasted image 20230213033258.png"
               }
             }
           },
@@ -180,21 +180,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c450348f49b7df00",
+  "active": "8f9c6b4cb1f83abe",
   "lastOpenFiles": [
-    "docs/images/Pasted image 20230212000159.png",
-    "docs/3. Humble Beginnings.md",
-    "docs/images/Pasted image 20230213025918.png",
-    "docs/images/Pasted image 20230213031007.png",
-    "docs/images/Pasted image 20230213030944.png",
-    "docs/images/Pasted image 20230213030922.png",
+    "docs/4. Beginning to understand.md",
+    "docs/images/Pasted image 20230213033258.png",
+    "docs/images/Pasted image 20230213033244.png",
+    "docs/images/Pasted image 20230213032842.png",
     "docs/images/Pasted image 20230212000138.png",
+    "Pasted image 20230213180031.png.md",
+    "docs/3. Humble Beginnings.md",
     "docs/images/Pasted image 20230211225219.png",
     "docs/images/Pasted image 20230211225005.png",
     "docs/images/Pasted image 20230211224925.png",
     "docs/images/Pasted image 20230211224910.png",
+    "docs/images/Pasted image 20230211224751.png",
+    "docs/images/Pasted image 20230212000159.png",
     "docs/1. Introduction.md",
-    "docs/2. Goals.md",
-    "docs/4. Beginning to understand.md"
+    "docs/2. Goals.md"
   ]
 }
