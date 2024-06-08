@@ -51,23 +51,68 @@ export class IncarnosItem extends Item {
     }
     // Otherwise, create a roll and send a chat message from it.
     else {
-      // Retrieve roll data.
-      const rollData = this.getRollData();
-      new Roll('1d20').toMessage({
-        speaker: speaker,
-        rollMode: rollMode,
-        flavor: label,
-      });
-      // Invoke the roll and submit it to chat.
-      const roll = new Roll(rollData.item.formula, rollData);
-      // If you need to store the value first, uncomment the next line.
-      // let result = await roll.roll({async: true});
-      roll.toMessage({
-        speaker: speaker,
-        rollMode: rollMode,
-        flavor: "Damage",
-      });
-      return roll;
+      if (this.type === "weapon") {
+        const flavor = label
+        const rollData = this.getRollData();
+        const dmg = rollData.item.formula
+
+        const d = new Dialog({
+            title: "Attackroll",
+            content: "<p>Choose:</p>",
+            buttons: {
+                1: {
+                    label: "Advantage",
+                    callback: () => choice(1)
+                },
+                2: {
+                    label: "Normal",
+                    callback: () => choice(2)
+                },
+                3: {
+                    label: "Disadvantage",
+                    callback: () => choice(3)
+                }
+            },
+        });
+        d.render(true);
+        function choice(x) {
+            switch(x) {
+                case 1:
+                    doRoll('2d20kl')
+                    break;
+                case 2:
+                    doRoll('1d20')
+                    break;
+                case 3:
+                    doRoll('2d20kh')
+                    break;
+            }
+        }
+
+        async function doRoll(hit) {
+            const rollHit = await new Roll(hit, rollData).evaluate();
+            const rollDmg = await new Roll(dmg, rollData).evaluate();
+            await ChatMessage.create({speaker: speaker, flavor: flavor, rolls:[rollHit, rollDmg],type: CONST.CHAT_MESSAGE_TYPES.ROLL}); 
+        }
+      } else {
+        // Retrieve roll data.
+        const rollData = this.getRollData();
+        new Roll('1d20').toMessage({
+          speaker: speaker,
+          rollMode: rollMode,
+          flavor: label,
+        });
+        // Invoke the roll and submit it to chat.
+        const roll = new Roll(rollData.item.formula, rollData);
+        // If you need to store the value first, uncomment the next line.
+        // let result = await roll.roll({async: true});
+        roll.toMessage({
+          speaker: speaker,
+          rollMode: rollMode,
+          flavor: "Damage",
+        });
+        return roll;
+      }
     }
   }
 }

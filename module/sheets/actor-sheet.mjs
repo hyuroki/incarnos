@@ -66,16 +66,13 @@ export class IncarnosActorSheet extends ActorSheet {
    */
   _prepareCharacterData(context) {
     // Handle ability scores.
-    console.log(context.system.abilities);
     for (let [k, v] of Object.entries(context.system.abilities)) {
-      console.log(k);
       v.label = game.i18n.localize(CONFIG.INCARNOS.abilities[k]) ?? k;
     }
   }
 
   _prepareNpcData(context) {
     // Handle ability scores.
-    console.log(context.system);
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.INCARNOS.abilities[k]) ?? k;
     }
@@ -110,6 +107,10 @@ export class IncarnosActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
       if (i.type === 'item') {
+        gear.push(i);
+      }
+      // Append to gear.
+      if (i.type === 'weapon') {
         gear.push(i);
       }
       // Append to features.
@@ -214,7 +215,7 @@ export class IncarnosActorSheet extends ActorSheet {
 
     // Handle item rolls.
     if (dataset.rollType) {
-      if (dataset.rollType == 'item') {
+      if (dataset.rollType == 'item' || dataset.rollType == 'weapon' || dataset.rollType == 'spell') {
         const itemId = element.closest('.item').dataset.itemId;
         const item = this.actor.items.get(itemId);
         if (item) return item.roll();

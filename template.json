@@ -8,7 +8,7 @@
           "min": 0,
           "max": 10
         },
-        "mana": {
+        "power": {
           "value": 5,
           "min": 0,
           "max": 5
@@ -19,9 +19,12 @@
           },
           "level": {
             "value": 1
-          },        
+          },
           "parry": {
             "value": 5
+          },
+          "movement": {
+            "value": 9
           }
         },
         "abilities": {
@@ -62,7 +65,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "weapon", "feature", "spell"],
     "templates": {
       "base": {
         "description": ""
@@ -71,8 +74,13 @@
     "item": {
       "templates": ["base"],
       "quantity": 1,
+      "weight": 0
+    },
+    "weapon": {
+      "templates": ["base"],
+      "quantity": 1,
       "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      "formula": "d20 + @abilities.str.value"
     },
     "feature": {
       "templates": ["base"]

@@ -30,7 +30,7 @@ Hooks.once('init', async function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "2*@abilities.prc.value + @abilities.spd.value + 3d20",
+    formula: "@abilities.prc.value + @abilities.spd.value + 1d20",
     decimals: 2
   };
 
@@ -72,8 +72,12 @@ Handlebars.registerHelper('toLowerCase', function(str) {
 /* -------------------------------------------- */
 
 Hooks.once("ready", async function() {
-  // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
+});
+
+// Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
+Hooks.on("hotbarDrop", (bar, data, slot) => {
+  createItemMacro(data, slot)
+  return false;
 });
 
 /* -------------------------------------------- */
@@ -89,7 +93,12 @@ Hooks.once("ready", async function() {
  */
 async function createItemMacro(data, slot) {
   // First, determine if this is a valid owned item.
-  if (data.type !== "Item") return;
+  console.log("before check")
+  if (data.type !== "Item") {
+    console.log("not an item" + data.type)
+    return;
+  }
+    console.log("after check")
   if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {
     return ui.notifications.warn("You can only create macro buttons for owned Items");
   }
@@ -98,16 +107,19 @@ async function createItemMacro(data, slot) {
 
   // Create the macro command using the uuid.
   const command = `game.incarnos.rollItemMacro("${data.uuid}");`;
-  let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
-  if (!macro) {
-    macro = await Macro.create({
+  console.log("before command")
+  // let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
+  // if (!macro) {
+    let macro = await Macro.create({
       name: item.name,
       type: "script",
       img: item.img,
       command: command,
       flags: { "incarnos.itemMacro": true }
     });
-  }
+  // }
+  console.log("after command")
+  console.log(macro)
   game.user.assignHotbarMacro(macro, slot);
   return false;
 }

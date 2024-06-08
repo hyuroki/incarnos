@@ -45,21 +45,31 @@ export class IncarnosActor extends Actor {
   _prepareCharacterData(actorData) {
     if (actorData.type !== 'character') return;
 
+    console.log(actorData);
     // Make modifications to data here. For example:
     const systemData = actorData.system;
     const abilityScore = systemData.abilities;
+    const attributeScore = systemData.attributes;
 
-    // Set Max HP and Mana 
+    // Set Max HP and power 
     systemData.health.max = 2*abilityScore.con.value + abilityScore.str.value
-    systemData.mana.max = 2*abilityScore.wis.value + abilityScore.int.value
+    systemData.power.max = 2*abilityScore.wis.value + abilityScore.int.value
 
     // Set Parry
-    systemData.attributes.parry.value = Math.floor((2*abilityScore.spd.value + abilityScore.dex.value)/3)
+    attributeScore.parry.value = Math.floor((2*abilityScore.prc.value + abilityScore.dex.value)/3)
+
+    // Set Movementspeed
+    attributeScore.movement.value = ((abilityScore.spd.value/2) + 1)*1.5
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(abilityScore)) {
       // Calculate the saving throw value for its correspondant ability score.
-      ability.save = Math.floor((ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4)
+      if (key == "str" || key == "dex" || key == "spd" || key == "con") {
+        ability.save = Math.floor((ability.value*2 + abilityScore.con.value)/3)
+      }
+      if (key == "int" || key == "prc" || key == "wis" || key == "cha") {
+        ability.save = Math.floor((ability.value*2 + abilityScore.wis.value)/3)
+      }
     }
   }
 
