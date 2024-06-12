@@ -59,7 +59,7 @@ export class IncarnosActor extends Actor {
     attributeScore.parry.value = Math.floor((2*abilityScore.prc.value + abilityScore.dex.value)/3)
 
     // Set Movementspeed
-    attributeScore.movement.value = ((abilityScore.spd.value/2) + 1)*1.5
+    attributeScore.movement.value = (abilityScore.spd.value/2)
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(abilityScore)) {
