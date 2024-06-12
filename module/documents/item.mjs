@@ -62,32 +62,19 @@ export class IncarnosItem extends Item {
             buttons: {
                 1: {
                     label: "Advantage",
-                    callback: () => choice(1)
+                    callback: () => doRoll('2d20kl')
                 },
                 2: {
                     label: "Normal",
-                    callback: () => choice(2)
+                    callback: () => doRoll('1d20')
                 },
                 3: {
                     label: "Disadvantage",
-                    callback: () => choice(3)
+                    callback: () => doRoll('2d20kh')
                 }
             },
         });
         d.render(true);
-        function choice(x) {
-            switch(x) {
-                case 1:
-                    doRoll('2d20kl')
-                    break;
-                case 2:
-                    doRoll('1d20')
-                    break;
-                case 3:
-                    doRoll('2d20kh')
-                    break;
-            }
-        }
 
         async function doRoll(hit) {
             const rollHit = await new Roll(hit, rollData).evaluate();
