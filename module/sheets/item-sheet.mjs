@@ -59,5 +59,11 @@ export class IncarnosItemSheet extends ItemSheet {
     if (!this.isEditable) return;
 
     // Roll handlers, click handlers, etc. would go here.
+    // Autoselect fields
+    html.find('.auto-select').each((i,input) => {
+      input.addEventListener('focus', function() {
+        this.select();
+      });
+    });
   }
 }

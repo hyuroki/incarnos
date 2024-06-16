@@ -80,6 +80,7 @@
       "templates": ["base"],
       "quantity": 1,
       "weight": 0,
+      "hands": 1,
       "formula": "d20 + @abilities.str.value"
     },
     "feature": {

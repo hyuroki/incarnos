@@ -165,6 +165,13 @@ export class IncarnosActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
 
+    // Autoselect fields
+    html.find('.auto-select').each((i,input) => {
+      input.addEventListener('focus', function() {
+        this.select();
+      });
+    });
+
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);

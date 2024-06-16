@@ -1,0 +1,90 @@
+<form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button Layout</title>
+        <style>
+            adbody {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f0f0f0;
+            }
+
+            .dcontainer {
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                height: 150px;
+                border: none;
+                gap: 2px;
+                padding: 2px;
+            }
+
+            .top-half, .bottom-half {
+                flex: 1;
+                display: flex;
+            }
+
+            .top-half {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .top-button {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .bottom-half {
+                flex-direction: row;
+                gap: 2px;
+            }
+
+            .bottom-button {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 10px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .bottom-button:hover, .top-button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body class="adbody">
+        <div class="dcontainer">
+            <div class="half-screen top-half">
+                <button class="top-button">Top Button</button>
+            </div>
+            <div class="half-screen bottom-half">
+                <button class="bottom-button">Button 1</button>
+                <button class="bottom-button">Button 2</button>
+                <button class="bottom-button">Button 3</button>
+                <button class="bottom-button">Button 4</button>
+            </div>
+        </div>
+    </body>
+</form>

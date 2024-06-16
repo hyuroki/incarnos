@@ -16,7 +16,7 @@
         <div class="resource flex-group-center">
           <label for="system.health.value" class="resource-label">Health</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+          <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number" class="auto-select"/>
           <span> / </span>
           <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
           </div>
@@ -25,7 +25,7 @@
         <div class="resource flex-group-center">
           <label for="system.power.value" class="resource-label">Power</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+          <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" class="auto-select"/>
           <span> / </span>
           <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
           </div>
@@ -46,13 +46,13 @@
         <div class="resource flex-group-center">
           <label for="system.attributes.xp.value" class="resource-label">Experience</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.attributes.xp.value" value="{{system.attributes.xp.value}}" data-dtype="Number"/>
+          <input type="text" name="system.attributes.xp.value" value="{{system.attributes.xp.value}}" data-dtype="Number" class="auto-select"/>
           </div>
         </div>
         <div class="resource flex-group-center">
           <label for="system.attributes.level.value" class="resource-label">Level</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number" class="auto-select"/>
           </div>
         </div>
 
@@ -85,7 +85,7 @@
             {{#each system.abilities as |ability key|}}
             <div class="ability flexrow flex-group-center">
               <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20" data-label="{{ability.label}} Ability Check">{{ability.label}}</label>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" class="auto-select"/>
               <span class="ability-mod rollable" data-roll="d20" data-label="{{ability.label}} Saving Throw: {{ability.save}}">Save {{numberFormat ability.save decimals=0 sign=false}}</span>
             </div>
             {{/each}}
