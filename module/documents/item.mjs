@@ -125,19 +125,24 @@ export class IncarnosItem extends Item {
                       buttons: {
                         button1: {
                           label: "Strength",
-                          callback: () => {powerattacktype = 1}
+                          callback: () => {
+                            powerattacktype = 1
+                            rollAttackPower(form.advtype, form.advnum, form.ap, rollData.item.hands, powerattacktype, rollData);
+                          }
                         },
                         button2: {
                           label: "Dexterity",
-                          callback: () => {powerattacktype = 2}
+                          callback: () => {
+                            powerattacktype = 2
+                            rollAttackPower(form.advtype, form.advnum, form.ap, rollData.item.hands, powerattacktype, rollData);
+                          }
                         }
                       }
                     }).render(true);
-                    rollAttackPower(form.advtype, form.advnum, form.ap, rollData.item.hands, powerattacktype, rollData);
                     break;
                   }
                   case "Attack (Feint)": {
-                    rollAttackFeint(form.advtype, form.advnum, form.ap, rollData.item.hands);
+                    rollAttackFeint(form.advtype, form.advnum, form.ap, rollData.item.hands, rollData);
                     break;
                   }
                 }
@@ -154,15 +159,19 @@ export class IncarnosItem extends Item {
           if (advtype == "Disadvantage") {
             advnum *= -1;
           }
-          let calc = advnum + difference
+          let calc;
+          if (advtype != "Normal") {
+            calc = advnum + difference
+          } else {
+            calc = difference
+          }
           if (calc < 0) {
             adv = 'kh';
             calc *= -1;
           } else if (calc > 0) {
             adv = 'kl';
-          } else if (calc == 0) {
-            calc = 1;
-          }
+          } 
+          calc += 1;
           return `${calc}d20${adv}`
         }
 
@@ -181,7 +190,7 @@ export class IncarnosItem extends Item {
         }
 
         async function rollAttackFury(advtype, advnum, ap, numHands) {
-          const rollHit = await new Roll(calculateAdvantageDice(advtype, advnum, -ap),rollData).evaluate();
+          const rollHit = await new Roll(calculateAdvantageDice(advtype, advnum, (-ap)+1),rollData).evaluate();
           function replaceNumberInString(str, newNumber) {
             return str.replace(/^\d+/, newNumber);
           }
@@ -207,18 +216,21 @@ export class IncarnosItem extends Item {
           const rollHit = await new Roll(calculateAdvantageDice(advtype, advnum, 0),rollData).evaluate();
           let powerdmg;
           if (powerattacktype == 1) {
-            // const bonus = rollData.
+            powerdmg = Math.floor((rollData.abilities.dex.value*(ap-1))/4);
+          } else {
+            powerdmg = Math.floor((rollData.abilities.str.value*(ap-1))/4);
           }
-          console.log(rollData);
-          const rollDmg = await new Roll(dmg,rollData).evaluate();
-          const text = `<br>Spend ${ap} AP on Attack (Power) with ${advnum}x ${advtype}`
+          const rollDmg = await new Roll(`${dmg}+${powerdmg}`,rollData).evaluate();
+          const text = `<br>Spend ${ap} AP on Attack (Power) with ${advnum}x ${advtype} and a powerbonus of +${powerdmg}`
           await ChatMessage.create({speaker: speaker, flavor: flavor+text, rolls:[rollHit,rollDmg],type: CONST.CHAT_MESSAGE_TYPES.ROLL}); 
         }
         
-        async function rollAttackRelentless(advtype, advnum, ap, numHands) {
-          const rollHit = await new Roll(calculateAdvantageDice(advtype, advnum, ap-1),rollData).evaluate();
+        async function rollAttackFeint(advtype, advnum, ap, numHands, rollData) {
+          const feintbonus = Math.floor((rollData.abilities.int.value*(ap-1))/4);
+          const hit = calculateAdvantageDice(advtype, advnum, ap)
+          const rollHit = await new Roll(`${hit}-${feintbonus}`,rollData).evaluate();
           const rollDmg = await new Roll(dmg,rollData).evaluate();
-          const text = `<br>Spend ${ap} AP on Attack (Feint) with ${advnum}x ${advtype}`
+          const text = `<br>Spend ${ap} AP on Attack (Feint) with ${advnum}x ${advtype} and a feintbonus of + ${feintbonus}`
           await ChatMessage.create({speaker: speaker, flavor: flavor+text, rolls:[rollHit,rollDmg],type: CONST.CHAT_MESSAGE_TYPES.ROLL}); 
         }
         // const d = new Dialog({
