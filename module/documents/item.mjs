@@ -227,7 +227,7 @@ export class IncarnosItem extends Item {
         
         async function rollAttackFeint(advtype, advnum, ap, numHands, rollData) {
           const feintbonus = Math.floor((rollData.abilities.int.value*(ap-1))/4);
-          const hit = calculateAdvantageDice(advtype, advnum, ap)
+          const hit = calculateAdvantageDice(advtype, advnum, 0)
           const rollHit = await new Roll(`${hit}-${feintbonus}`,rollData).evaluate();
           const rollDmg = await new Roll(dmg,rollData).evaluate();
           const text = `<br>Spend ${ap} AP on Attack (Feint) with ${advnum}x ${advtype} and a feintbonus of + ${feintbonus}`
