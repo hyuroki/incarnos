@@ -52,18 +52,25 @@ export class IncarnosActor extends Actor {
     const attributeScore = systemData.attributes;
 
     // Set Max HP and power 
-    systemData.health.max = 2*abilityScore.con.value + abilityScore.str.value
-    systemData.power.max = 2*abilityScore.wis.value + abilityScore.int.value
+    const healthbonus = systemData.health.bonus 
+    systemData.health.max = 2*abilityScore.con.value + abilityScore.str.value + healthbonus
+    const powerbonus = systemData.power.bonus
+    systemData.power.max = 2*abilityScore.wis.value + abilityScore.int.value + powerbonus
 
     // Set Parry
-    attributeScore.parry.value = Math.floor((2*abilityScore.prc.value + abilityScore.dex.value)/3)
+    const parrybonus = attributeScore.parry.bonus
+    attributeScore.parry.value = Math.floor((2*abilityScore.prc.value + abilityScore.dex.value)/3) + parrybonus
 
     // Set Movementspeed
-    attributeScore.movement.value = (abilityScore.spd.value/2)
+    const movementbonus = attributeScore.movement.bonus
+    attributeScore.movement.value = (abilityScore.spd.value/2) + movementbonus
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
+    // Loop through ability scores, and add their modifiers to our sheet output
     for (let [key, ability] of Object.entries(abilityScore)) {
-      // Calculate the saving throw value for its correspondant ability score.
+      // Calculate the abilityscore bonus value for its correspondant ability score
+      const abilitybonus = ability.bonus
+      ability.value += abilitybonus
+      // Calculate the saving throw value for its correspondant ability score
       if (key == "str" || key == "dex" || key == "spd" || key == "con") {
         ability.save = Math.floor((ability.value*2 + abilityScore.con.value)/3)
       }
@@ -85,9 +92,14 @@ export class IncarnosActor extends Actor {
  
      // Loop through ability scores, and add their modifiers to our sheet output.
      for (let [key, ability] of Object.entries(abilityScore)) {
-       // Calculate the saving throw value for its correspondant ability score.
-       ability.save = Math.floor((ability.value*2 + abilityScore.con.value + abilityScore.wis.value)/4)
-     }
+      // Calculate the saving throw value for its correspondant ability score.
+      if (key == "str" || key == "dex" || key == "spd" || key == "con") {
+        ability.save = Math.floor((ability.value*2 + abilityScore.con.value)/3)
+      }
+      if (key == "int" || key == "prc" || key == "wis" || key == "cha") {
+        ability.save = Math.floor((ability.value*2 + abilityScore.wis.value)/3)
+      }
+    }
   }
 
   /**

@@ -6,12 +6,20 @@
         "health": {
           "value": 10,
           "min": 0,
-          "max": 10
+          "max": 10,
+          "bonus": 0
         },
         "power": {
           "value": 5,
           "min": 0,
-          "max": 5
+          "max": 5,
+          "bonus": 0
+        },
+        "actionpoints": {
+          "value": 4,
+          "min": 0,
+          "max": 4,
+          "bonus": 0
         },
         "attributes": {
           "xp": {
@@ -21,36 +29,46 @@
             "value": 1
           },
           "parry": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "movement": {
-            "value": 9
+            "value": 9,
+            "bonus": 0
           }
         },
         "abilities": {
           "str": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "dex": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "con": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "wis": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "prc": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "spd": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "int": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           },
           "cha": {
-            "value": 5
+            "value": 5,
+            "bonus": 0
           }
         },
         "biography": ""

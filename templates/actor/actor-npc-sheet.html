@@ -32,9 +32,9 @@
         </div>
         
         <div class="resource flex-group-center">
-          <label for="system.parry" class="resource-label">Parry</label>
+          <label for="system.attributes.parry.value" class="resource-label rollable" data-roll="d20" data-label="Parry: {{system.attributes.parry.value}}">Parry</label>
           <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="system.parry" value="{{numberFormat system.parry decimals=0 sign=false}}" data-dtype="Number"/>
+          <input type="text" name="system.attributes.parry.value" value="{{numberFormat system.attributes.parry.value decimals=0 sign=false}}" data-dtype="Number"/>
           </div>
         </div>
         <div class="resource flex-group-center">
@@ -92,6 +92,7 @@
             <div class="ability flexrow flex-group-center">
               <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20" data-label="{{ability.label}} Ability Check">{{ability.label}}</label>
               <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number" class="auto-select"/>
+              <span class="ability-mod rollable" data-roll="d20" data-label="{{ability.label}} Contest: {{ability.value}}">Contest</span>
               <span class="ability-mod rollable" data-roll="d20" data-label="{{ability.label}} Saving Throw: {{ability.save}}">Save {{numberFormat ability.save decimals=0 sign=false}}</span>
             </div>
             {{/each}}
